@@ -16,5 +16,6 @@ int main()
 	}
 	
 	printf("O fatorial de %d é : %d\n",num,resultado);
+	//d
 return 0;
 }
