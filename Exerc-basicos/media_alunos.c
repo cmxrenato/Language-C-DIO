@@ -4,7 +4,7 @@
 int main()
 {
 float a, b, media;
-char linha[5], linha2[5], linha3[20];
+char linha[50];
 char nome[20];
 
 
@@ -17,8 +17,8 @@ fgets(linha,sizeof(linha),stdin);
 sscanf(linha,"%f",&a);
 
 printf("Digite a segunda nota: ");
-fgets(linha2,sizeof(linha2),stdin);
-sscanf(linha2,"%f",&b);
+fgets(linha,sizeof(linha),stdin);
+sscanf(linha,"%f",&b);
 
 media = (a + b)/2;
 
