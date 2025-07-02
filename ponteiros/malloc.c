@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 int main() {
-    int *vetor;
+    int *vetor = NULL;
     int n = 5;
 
     vetor = (int *) malloc(n * sizeof(int)); //(int *): converte o ponteiro void* retornado por malloc para int*.
@@ -21,6 +21,6 @@ int main() {
     }
 
     free(vetor); // libera a memória
-
+    vetor = NULL;
     return 0;
 }
