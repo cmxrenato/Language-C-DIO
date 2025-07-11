@@ -1,2 +1,3 @@
 # Language-C-DIO
-Repositório para guardar meus estudos em C
+Repositório para guardar meus estudos em C.
+Renato
