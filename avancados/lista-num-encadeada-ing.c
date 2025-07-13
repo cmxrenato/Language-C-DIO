@@ -17,6 +17,15 @@ struct Node *createNode(int value)
     newNode->next = NULL;
     return newNode;
 }
+void pop(struct Node **head) {
+    if (*head == NULL) return; // lista vazia
+
+    struct Node *temp = *head;      // guarda o nó atual
+    *head = (*head)->next;          // avança o ponteiro head
+    free(temp);                     // libera o antigo head
+}
+
+
 
 void printNodes(struct Node *head){
     struct Node *current = head;
@@ -50,8 +59,9 @@ int main()
         newNode->next = head;
         head = newNode;
     }
-
+    pop(&head);
     printNodes(head);
+    
     freeMemory(head);
     head = NULL;
 
