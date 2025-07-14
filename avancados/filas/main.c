@@ -44,6 +44,15 @@ void addFila(int value, struct Node **fila)
     ultimo->nextNode = novo;
 
 }
+void pop(struct Node **head){
+   if (*head == NULL) return; // lista vazia
+
+    struct Node *temp = *head;      // guarda o nó atual
+    *head = (*head)->nextNode;          // avança o ponteiro head
+    free(temp);     
+
+                 // libera o antigo head
+}
 
 void printFila(struct Node *head)
 {
@@ -71,7 +80,8 @@ int main()
     addFila(2, &fila);
     addFila(3, &fila);
     addFila(4, &fila);
-
+    pop(&fila);
+    addFila(5, &fila);
     printFila(fila);
     freeFila(fila);
     fila = NULL;
